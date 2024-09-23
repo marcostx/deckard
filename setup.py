@@ -1,16 +1,13 @@
-from setuptools import setup, find_packages
-
 setup(
     name="deckard",
     version="0.1.0",
     packages=find_packages(),
     install_requires=[
-        "argparse",
-        # Add other dependencies here
+        "typer",
     ],
     entry_points={
         "console_scripts": [
-            "deckard=deckard.cli:main",
+            "deckard=deckard.cli:app",
         ],
     },
     author="Author",
