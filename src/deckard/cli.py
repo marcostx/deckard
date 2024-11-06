@@ -5,7 +5,9 @@ import pandas as pd
 
 __version__ = "0.1.0"
 
-app = typer.Typer(help="Deckard CLI - Develop, manage, deploy, and monitor machine learning models.")
+app = typer.Typer(
+        help="Deckard CLI - Develop, manage, deploy, and monitor machine learning models."
+    )
 
 @app.command()
 def version():
@@ -54,6 +56,7 @@ def load_data_for_model(model_id):
         pandas.DataFrame: The loaded data for model explanation
     """
     # TODO: Implement actual data loading logic
+    print(f"Loading data for model: {model_id}")
     # This is a placeholder that should be replaced with your actual data loading code
     return pd.DataFrame()  # Return empty DataFrame for now
 
