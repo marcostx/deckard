@@ -35,7 +35,63 @@ Deckard is designed to be installed in a conda environment. Follow these steps t
 
    The generated documentation can be found in the `_build/html` directory.
 
+4. **Run tests to verify everything works:**
+   ```bash
+   python -m pytest tests/ -v
+   ```
+
 ## Usage
+
+### Quick Start
+
+After installation, you can immediately start using Deckard:
+
+```bash
+# Show version
+deckard version
+
+# Train a classification model
+deckard train --task classification --n-samples 1000 --n-features 8
+
+# Train a regression model
+deckard train --task regression --n-samples 500 --n-features 5
+
+# List all trained models
+deckard list-models
+
+# Generate SHAP explanations for a model
+deckard explain --model-id <your-model-id>
+
+# List artifacts for a model
+deckard artifacts --run-id <your-model-id>
+
+# Serve a model via REST API
+deckard serve --model-id <your-model-id> --port 5000
+```
+
+### Available Commands
+
+- `deckard version` - Show version information
+- `deckard train` - Train classification or regression models
+- `deckard list-models` - List all available trained models
+- `deckard explain` - Generate SHAP explanations for model interpretability
+- `deckard artifacts` - List artifacts associated with specific run IDs
+- `deckard serve` - Serve trained models via REST API
+
+### Demo
+
+Run the included demo script to see all features in action:
+
+```bash
+python demo.py
+```
+
+### REST API Endpoints
+
+When serving a model, the following endpoints are available:
+
+- `GET /health` - Health check endpoint
+- `POST /predict` - Make predictions with JSON payload: `{"features": [1, 2, 3, ...]}`
 
 Use the `deckard` command in the terminal to access the CLI features. Run `deckard --help` to see the available commands and options.
 
