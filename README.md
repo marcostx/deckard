@@ -1,4 +1,4 @@
-
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/marcostx/deckard)
 ![b385c387-bladerunner](https://github.com/user-attachments/assets/210ba251-3a1d-4a43-a419-b1e5b1887054)
 
 # deckard
